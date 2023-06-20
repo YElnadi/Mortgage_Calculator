@@ -2,12 +2,12 @@ import React from "react";
 import Slider from "@mui/material/Slider";
 import Stack from "@mui/material/Stack";
 import { Typography } from "@mui/material";
-const SliderComponent = ({ min, max, defaultValue, step, onChange, value, label }) => {
+const SliderComponent = ({ min, max, defaultValue, step, onChange, value, label, unit }) => {
   return (
     <div>
       <Stack spacing={1}>
         <Typography variant="subtitle2">{label}</Typography>
-        <Typography variant="h5">$ {defaultValue}</Typography>
+        <Typography variant="h5">{unit} {defaultValue}</Typography>
       </Stack>
 
       <Slider
@@ -18,6 +18,7 @@ const SliderComponent = ({ min, max, defaultValue, step, onChange, value, label 
         label = {label}
         onChange={onChange}
         value={value}
+        unit = {unit}
         marks
         aria-label="Default"
         valueLabelDisplay="auto"
