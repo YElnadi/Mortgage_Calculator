@@ -2,11 +2,11 @@ import React from "react";
 import Slider from "@mui/material/Slider";
 import Stack from "@mui/material/Stack";
 import { Typography } from "@mui/material";
-const SliderComponent = ({ min, max, defaultValue, step, onChange, value }) => {
+const SliderComponent = ({ min, max, defaultValue, step, onChange, value, label }) => {
   return (
     <div>
       <Stack spacing={1}>
-        <Typography variant="subtitle2">Home Value</Typography>
+        <Typography variant="subtitle2">{label}</Typography>
         <Typography variant="h5">$ {defaultValue}</Typography>
       </Stack>
 
@@ -15,6 +15,7 @@ const SliderComponent = ({ min, max, defaultValue, step, onChange, value }) => {
         min={min}
         max={max}
         step={step}
+        label = {label}
         onChange={onChange}
         value={value}
         marks
