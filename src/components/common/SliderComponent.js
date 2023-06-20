@@ -1,9 +1,9 @@
 import React from 'react';
 import Slider from '@mui/material/Slider';
-const SliderComponent = () => {
+const SliderComponent = ({min, max, defaultValue}) => {
   return (
     <div>
-      <Slider defaultValue={50} aria-label="Default" valueLabelDisplay="auto" />
+      <Slider defaultValue={defaultValue} min = {min} max ={max} aria-label="Default" valueLabelDisplay="auto" />
     </div>
   );
 }
